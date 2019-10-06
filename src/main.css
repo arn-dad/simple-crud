@@ -1,0 +1,18 @@
+.main-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-form {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.table {
+  width: 65%;
+}
+
+.helper-text {
+  display: none;
+}

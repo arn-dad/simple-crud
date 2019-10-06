@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CRDU</title>
+  <link rel="stylesheet" href="./src/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+</head>
+
+<body onload="onReady()">
+  <div class="container">
+    <div class="tabs">
+      <ul>
+        <li class="is-active">
+          <a id='table-tab' href="index.html">Items</a>
+        </li>
+      </ul>
+    </div>
+    <main class="main-container">
+      <div id='create-item-form' class="create-form hidden">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input id='name' class="input" type="text">
+          </div>
+          <p style="display: none;" class="help is-danger">Item name is required</p>
+        </div>
+        <div class="field">
+          <label class="label">Price</label>
+          <div class="control">
+            <input id='price' class="input" type="number" value="0">
+          </div>
+          <p style="display: none;" class="help is-danger">Item Price is required</p>
+        </div>
+        <div class="field">
+          <label class="label">Description</label>
+          <div class="control">
+            <textarea id='description' class="textarea" placeholder="..."></textarea>
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button id="submit" class="button is-link">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <table id="item-table" class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="table-root"></tbody>
+      </table>
+    </main>
+  </div>
+  <script src="./src/index.js"></script>
+</body>
+
+</html>
